@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mouseoverevent(){
+            alert("remove mouse");
+        }
+
+        function bigImg(x){
+            x.style.height="400px";
+            x.style.width="900px";
+        }
+        function normalImg(x){
+            x.style.height="200px";
+            x.style.height="200px";
+        }
+        function a(){
+            prompt("Nikal ");
+
+        }
+        function md(){
+            document.getElementById("myP").style.color="red";
+        }
+        function mo(){
+            document.getElementById("myP").style.color="blue";
+        }
+    </script>
+    <button onmouseover="mouseoverevent()" >click me</button>
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Picture1.jpg" alt="" > 
+
+
+    <p id="myP" onmousedown="md()" onmouseup="mo()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eligendi alias dolorum nemo doloremque aperiam rem sit magni ad autem.
+    </p>
+</body>
+</html>
