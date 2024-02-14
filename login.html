@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" type="image/x-icon" href="logo4.png"> 
+    <!-- to add image beside my title  -->
+    <style>
+        body {
+            background-color: rgb(56, 248, 3);
+            font-size: large;
+        }
+        input {
+            margin: 10px;
+            margin-left: 20px;
+        }
+        form {
+            margin-left: 350px;
+            background-color: rgb(5, 100, 40);
+            width: 500px;
+            border-radius: 5px;
+        }
+        label {
+            border: 20px;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 5px;
+            margin-right: 25px;
+            padding-top: 5px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Don't have an account?! want to join us??</h1>
+    <div>
+        <form>
+            <label for="fs">First Name: </label> <input type="text" placeholder="First Name" required id="fs"><br>
+            <label for="ls">Last Name: </label> <input type="text" placeholder="Last Name" required id="ls"> <br>
+            <label for="gender">Gender: </label> <input type="radio" id="gender" value="male"
+                style="margin-left: 45px;">Male
+            <input type="radio" id="gender" value="female">Female
+            <input type="radio" id="gender" value="female">Other<br>
+            <label> City name:</label>
+            <select name="city-names" style="margin-left: 25px; width: 100px;" required>
+                <option selected disabled>Select City</option>
+                <option>Noida</option>
+                <option>Delhi</option>
+                <option>Agra</option>
+            </select><br>
+            <label>Address: </label>
+            <textarea name="" id="" cols="30" rows="7" style="margin-left: 37px; margin-top: 15px;"></textarea><br>
+            <label for="ps">Password: </label>
+            <input type="password" placeholder="Password" id="ps" style="margin-left: 27px;"> <br>
+            <label>Select File: </label>
+            <input type="file" required><br>
+            <input type="checkbox" style="margin-left: 151px;" required>I agree to the terms and conditions. <br>
+            <input type="submit" value="Submit" style="margin-left: 150px;" required>
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+
+</html>

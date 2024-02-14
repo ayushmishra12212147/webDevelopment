@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            text-align: center;
+        }
+        div{
+            margin-bottom: 13px;
+        } */
+    </style>
+    <script>
+        // function a(){
+        //     value="abc";
+        //     alert(value);
+        // }
+        function validate(){
+            var retval=true;
+            var name= document.form['myform'][fname].value;
+            if (name.length<5){
+                seterror("name","Name should be long");
+                
+            }
+
+            function seterror(id,error){
+
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <form action="" name="myform" onsubmit="return validate()">
+        <div id="name">
+            Name: <input type="text" name="fname" required>
+        </div>
+        <div>
+            Registration No: <input type="number" name="e" id="w" required>
+        </div>
+
+        <div>
+            Contact No. <input type="number" name="c" id="w" required>
+        </div>
+        <div>
+            Password: <input type="password" name="p" id="pass" required>
+        </div>
+        <div>
+            Confirm Password: <input type="password" name="cp" id="pass" required>
+        </div>
+        <div>
+            <input type="button" value="Submit" >
+        </div>
+    </form>
+    
+</body>
+</html>

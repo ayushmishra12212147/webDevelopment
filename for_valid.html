@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .error-message {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Form Validation</h2>
+  <form id="myForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="regNum">Registration Number:</label>
+      <input type="text" id="regNum" name="regNum" required>
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact Number:</label>
+      <input type="text" id="contact" name="contact" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="errorMessages" class="error-message"></div>
+</div>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById("name").value;
+    var regNum = document.getElementById("regNum").value;
+    var contact = document.getElementById("contact").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    var errorMessages = "";
+
+    if (name.length < 5) {
+      errorMessages += "Name should be at least 5 characters long.<br>";
+    }
+    if (regNum.length < 7) {
+      errorMessages += "Registration number should be at least 7 digits long.<br>";
+    }
+    if (contact.length !== 10) {
+      errorMessages += "Contact number should be exactly 10 digits long.<br>";
+    }
+    if (password !== confirmPassword) {
+      errorMessages += "Passwords do not match.<br>";
+    }
+
+    if (errorMessages !== "") {
+      document.getElementById("errorMessages").innerHTML = errorMessages;
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>
