@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Timer</title>
+</head>
+<body>
+    <div id="timer">10 : 0</div>
+    <script>
+var countdownMinutes = 10;
+var totalSeconds = countdownMinutes * 60;
+var timerDisplay = document.getElementById('timer');
+var countdown = setInterval(function() {
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    timerDisplay.innerHTML = minutes + ' : ' + seconds;
+    totalSeconds--;
+}, 1000);
+
+    </script>
+</body>
+</html>
