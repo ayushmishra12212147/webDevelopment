@@ -57,9 +57,9 @@
             <img class="slideshow-img"
                 src="https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=300"
                 alt="Image 3">
-            <div class="prev" onclick="changeSlide(-1)">❮ Previous</div>
-            <div class="next" onclick="changeSlide(1)">Next ❯</div>
-        </div>
+                <div class="next" onclick="changeSlide(1)">Next ❯</div>
+                <div class="prev" onclick="changeSlide(-1)">❮ Previous</div>
+            </div>
     </center>
     <script>
         let currentImageIndex = 0;
@@ -74,7 +74,6 @@
             currentImageIndex = (currentImageIndex + n + images.length) % images.length;
             showImage(currentImageIndex);
         }
-
         showImage(currentImageIndex); // Display initial image
 
         // Automatic slideshow
