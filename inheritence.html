@@ -7,21 +7,56 @@
 </head>
 <body>
     <script>
-        class Apple{
-            price(){
-                document.write("100Rs per kg<br>");
+        // class Apple{
+        //     price(){
+        //         document.write("100Rs per kg<br>");
+        //     }
+        // }
+        // class Fruit extends Apple{
+        //     quality(){
+        //         document.write("Fruits are good quality<br>");
+        //     }
+        // }
+        // let a = new Apple();
+        // let  f = new Fruit();
+        // a.price();
+        // f.quality();
+        // f.price();
+
+        // class Bike{
+        //     constructor(){
+        //         this.brand = "Honda";
+        //     }
+        // }
+        // class Vehicle extends Bike{
+        //     constructor(name,price){
+        //         super();//calls parent class constructor
+        //         this.name=name;
+        //         this.price=price;
+        //     }
+        // }
+        // var v=new Vehicle("shine","70000");
+        // document.write(v.brand+" "+v.name+" "+v.price+"<br>");
+
+
+        //prototype inheritence
+        let animal={
+            eats : true,
+            walk(){
+                alert("Animal Walk");
             }
-        }
-        class Fruit extends Apple{
-            quality(){
-                document.write("Fruits are good quality<br>");
-            }
-        }
-        let a = new Apple();
-        let  f = new Fruit();
-        a.price();
-        f.quality();
-        f.price();
+
+        };
+        let rabbit={
+            jumps:true,
+            _proto_:animal
+        };
+        let longEar={
+            earlength:10,
+            _proto_:rabbit
+        };
+        longEar.walk();
+        alert(longEar.jumps);
 
     </script>
 </body>

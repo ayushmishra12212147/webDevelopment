@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class BankAccount{
+            CustomerName;
+            accountNumber;
+            Balance = 0;
+            constructor(name, balance=0){
+                this.CustomerName = name;
+                this.accountNumber =Date.now();
+                this.balance=balance
+        }
+    }
+    class CurrentAccount extends BankAccount{
+        transactionlimit=50000;
+        constructor(name,balance){
+            super(name,balance);
+        }
+    }
+    const rakesh=new CurrentAccount("Rakesh k",2000);
+    console.log(rakesh);
+    </script>
+</body>
+</html>
