@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        class Person{
+            #firstname;
+            #lastname;
+            constructor (fname, lname){
+                this.#firstname = fname;
+                this.#lastname = lname;
+        }
+        getfullName(format=true){
+            return format ?this.#firstlast():this.lastFrist();
+        }
+        #firstlast(){
+            return  `${this.#firstname} ${this.#lastname}`;
+        }
+        #lastFrist(){
+            return `${this.#lastname} ${this.#firstname}`;
+        }
+    }
+        let person=new  Person('John','Doe');
+         console.log(person.getfullName()); 
+    </script>
 </body>
 </html>
