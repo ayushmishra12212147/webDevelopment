@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .imageStyle {
+            width: 80px;
+            height: 80px;
+            border: 3px solid grey;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/download (1).jpg" alt="" style="border: 3px solid grey;" id="mainImage" height="550px" width="540px" />
+<br>
+<br>
+<br>
+    <div id="divId" onclick="changeImageOnClick()" onmouseover="f1()" onmouseout="f2()">
+        <img id="1" src="img/download (2).jpg" class="imgStyle">
+        <img id="2" src="img/download (3).jpg" class="imgStyle">
+        <img id="3" src="img/download (4).jpg" class="imgStyle">
+        <img id="4" src="img/download (5).jpg" class="imgStyle">
+        <img id="5" src="img/download.jpg"  class="imgStyle">
+        <img id="6" src="img/download (4).jpg" class="imgStyle">
+
+
+    </div>
+    <script type="text/javascript">
+
+
+        function changeImageOnClick(){
+
+            var x=event.target;
+            if(x.tagName=="IMG"){
+                a=x.getAttribute("src");
+                document.getElementById("mainImage").setAttribute("src",a);
+            }
+        }
+        function f1(){
+            x = event.target;
+            x.style.cursor= 'pointer' ;
+            x.style.borderColor = 'red';
+        }
+        function f2(){
+            x = event.target;
+            x.style.borderColor='grey';
+        }
+    </script>
+</body>
+
+</html>
