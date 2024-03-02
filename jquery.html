@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="jqueryuncompressed.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- <script src="jqueryuncompressed.js"></script> -->
 </head>
 <body>
+<p>This is paragraph  1.</p>
+<p>This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+
     <script>
-    $(document).ready(function(){
-        document.write("hello");})
+    // $(document).ready(function(){
+    //     document.write("hello");})
+$(document).ready(function(){
+    $("p").css("background-color","pink");
+});
+
+
+
         </script>
 </body>
 </html>
