@@ -7,6 +7,20 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <h2>Create Object from JSON String</h2>
+    <p id="dem1"></p>
+    <p id="dem2"></p>
+    <p id="dem3"></p>
+    <script>
+        let text='{"employees":['+
+        '{"FirstName":"Jhon","lastname":"Doe"},'+
+        '{"FirstName":"Anna","lastname":"Smith"},'+
+        '{"FirstName":"Peter","lastname":"James"}]}';
+        const obj=JSON.parse(text);
+        document.getElementById("dem1").innerHTML=obj.employees[0].FirstName+" "+obj.employees[0].lastname;
+        document.getElementById("dem2").innerHTML=obj.employees[1].FirstName+" "+obj.employees[1].lastname;
+        document.getElementById("dem3").innerHTML=obj.employees[2].FirstName+" "+obj.employees[2].lastname;
+
+    </script>
 </body>
 </html>
