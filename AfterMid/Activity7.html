@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        var b={
+            name:"Ayush",
+            age:20,
+            city:"Lovely",
+            academic:{
+                year:"2",
+                semester:"4"
+
+            }
+        }
+        var det=JSON.stringify(b);
+        document.getElementById( "demo" ).innerHTML = det;
+        var k=JSON.parse(det);
+        console.log(k);
+
+    </script>
+</body>
+</html>
